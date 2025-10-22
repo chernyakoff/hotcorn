@@ -1,0 +1,83 @@
+monitor_name = "eDP-1"
+timeout_ms = 100       # ms between checks
+sticky_ms = 300        # minimal interval between triggers for the same area
+
+
+[[triggers]]
+# Top-right corner
+type = "Corner"
+position = "TopRight"
+radius = 20
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Top-right corner" }
+
+
+[[triggers]]
+# Bottom-right corner
+type = "Corner"
+position = "BottomRight"
+radius = 20
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Bottom-right corner" }
+
+
+[[triggers]]
+# Top-left corner
+type = "Corner"
+position = "TopLeft"
+radius = 20
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Top-left corner" }
+
+
+[[triggers]]
+# Bottom-left corner
+type = "Corner"
+position = "BottomLeft"
+radius = 20
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Bottom-left corner" }
+
+
+[[triggers]]
+# Top edge
+type = "Edge"
+position = "Top"
+width = 200      # horizontal size (centered automatically)
+height = 50      # thickness
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Top edge" }
+
+
+[[triggers]]
+# Right edge
+type = "Edge"
+position = "Right"
+width = 50       # thickness
+height = 200     # vertical size (centered automatically)
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Right edge" }
+
+
+[[triggers]]
+# Bottom edge
+type = "Edge"
+position = "Bottom"
+width = 200       # horizontal size (centered automatically)
+height = 50     # vertical size (centered automatically)
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Bottom edge" }
+
+
+
+[[triggers]]
+# Left edge
+type = "Edge"
+position = "Left"
+width = 50       # thickness
+height = 200     # vertical size (centered automatically)
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Left edge" }
+
+
+
+[[triggers]]
+# Arbitrary rectangle
+type = "Rect"
+x = 300
+y = 0
+width = 100
+height = 40
+action = { dispatcher = "exec", args = "hyprctl notify 5 2000 0 Arbitrary rectangle" }
